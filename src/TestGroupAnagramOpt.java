@@ -5,10 +5,14 @@ import java.util.Map;
 
 public class TestGroupAnagramOpt {
 
+	/** 
+     * Solution - O(n * k) time complexity
+     * 18ms execution time in Leetcode
+     */
 	public static void main(String[] args) {
-		String[] strs = { "act", "pots", "tops", "cat", "stop", "hat" };
+		String[] inputStrings = { "act", "pots", "tops", "cat", "stop", "hat" };
 		Map<String, List<String>> map = new HashMap<>();
-        for (String s : strs) {
+        for (String s : inputStrings) {
             int[] count = new int[26];
             for (int i = 0; i < s.length(); i++) {
                 count[s.charAt(i) - 'a']++;
